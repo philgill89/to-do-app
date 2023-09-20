@@ -27,6 +27,13 @@
     <div class="container">
         <a href="/"><span class="navbar-brand mb-0 h1">Todo</span></a>
         <a href="/create"><span class="btn btn-primary">Create Todo</span></a>
+        @if(session()->has('success'))
+            <div class="alert alert-success">
+
+                {{ session()->get('success') }}
+
+            </div>
+        @endif
     </div>
 </nav>
 
